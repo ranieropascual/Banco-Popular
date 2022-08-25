@@ -10,6 +10,15 @@ export class cuenta {
         this.#saldo = saldo;
     }
 
+    set cliente(valor) {
+        if (valor instanceof Cliente)
+            this.#cliente = valor;
+    }
+
+    get cliente() {
+        return this.#cliente;
+    }
+
     
     depositoEnCuenta(valor) {
         if (valor > 0)
