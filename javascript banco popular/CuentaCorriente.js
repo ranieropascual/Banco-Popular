@@ -5,7 +5,7 @@ export class CuentaCorriente extends cuenta {
     static cantidadCuentas = 0;
 
     constructor(cliente, numero, agencia) {
-        super(cliente, numero, agencia,0);
-        CuentaCorriente.cantidadCuentas++;
+    super(cliente,numero,agencia,0);    
+    CuentaCorriente.cantidadCuentas++;
     }
 }
