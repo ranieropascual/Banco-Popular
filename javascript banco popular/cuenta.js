@@ -3,6 +3,10 @@ export class cuenta {
     #saldo;
 
     constructor (cliente, numero, agencia, saldo) {
+
+        if (this.constructor == cuenta) {
+            console.log("no se debe instanciar objetos de la clase cuenta");
+        }
         this.numero = numero;
         this.agencia = agencia;
         this.#cliente = cliente;
@@ -26,8 +30,14 @@ export class cuenta {
     }
 
     retirarDeCuenta(valor) {
-           if (valor <= this.#saldo)
-                this.#saldo -= valor;
+       this._retirarDeCuenta(valor,0);
+    }
+
+    _retirarDeCuenta(valor, comision) {
+        valor = valor * (1+comision/100);
+
+        if (valor <= this.#saldo)
+            this.#saldo -= valor;
         return this.#saldo;
     }
 
@@ -40,5 +50,9 @@ export class cuenta {
         cuentaDestino.depositoEnCuenta(valor);
         valor = 200;
         valor = valor*1000;
+    }
+
+    prueba(){
+        console.log('metodo padre')
     }
 }
