@@ -10,6 +10,6 @@ export class CuentaCorriente extends cuenta {
     }
 
     retirarDeCuenta(valor) {
-        super._retirarDeCuenta(valor, 5); 
+        super._retirarDeCuenta(valor,5); 
     }
 }

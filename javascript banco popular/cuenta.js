@@ -5,7 +5,7 @@ export class cuenta {
     constructor (cliente, numero, agencia, saldo) {
 
         if (this.constructor == cuenta) {
-            console.log("no se debe instanciar objetos de la clase cuenta");
+            throw new console.error('no se debe instanciar objetos de la clase cuenta');
         }
         this.numero = numero;
         this.agencia = agencia;
@@ -30,8 +30,9 @@ export class cuenta {
     }
 
     retirarDeCuenta(valor) {
-       this._retirarDeCuenta(valor,0);
-    }
+        //metodo abstracto
+           throw new Error('debe implementar el metodo cuenta en su clase');
+        }
 
     _retirarDeCuenta(valor, comision) {
         valor = valor * (1+comision/100);
