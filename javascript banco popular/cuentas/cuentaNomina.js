@@ -1,5 +1,4 @@
 import { cuenta } from "./cuenta.js"
-
 export class cuentaNomina extends cuenta {
     constructor(cliente, numero, agencia,saldo) {
         super(cliente,numero,agencia,saldo);
