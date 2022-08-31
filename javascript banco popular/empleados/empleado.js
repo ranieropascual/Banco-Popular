@@ -1,4 +1,4 @@
-export class empleado {
+export class Empleado {
     #nombre;
     #dni;
     #salario;
@@ -15,8 +15,8 @@ asignarClave(clave){
     this.#clave = clave;
 }
 
-get clave() {
-    return this.#clave;
+autenticable (clave) {
+    return clave == this.#clave;
 }
 
     _verBonificacion(){
